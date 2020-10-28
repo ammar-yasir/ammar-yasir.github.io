@@ -8,6 +8,12 @@ import Interests from './Components/Interests';
 import Awards from './Components/Awards';
 import profileData from './profileData.json';
 import ReactGA from 'react-ga';
+import { ContentfulClient, ContentfulProvider } from 'react-contentful';
+
+const contentfulClient = new ContentfulClient({
+  accessToken: 'lWqwkWp7dHR66MrkFI1HBt419S7IhL_SWqibwrdWO38',
+  space: '5fn7j94cccwm',
+});
 
 class App extends Component {
   constructor(props) {
@@ -27,6 +33,7 @@ class App extends Component {
   }
   render() {
     return (
+      <ContentfulProvider client={contentfulClient}>
       <div className="App">
         <Sidebar sidebarData={this.state.landingData} />
         <div className="container-fluid p-0">
@@ -43,6 +50,7 @@ class App extends Component {
           <Awards awards={this.state.awards} />
         </div>
       </div>
+      </ContentfulProvider>
     );
   }
 }
