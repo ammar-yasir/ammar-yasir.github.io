@@ -9,7 +9,7 @@ const Skills = () => {
     contentType: 'skills'
   });
 
-  const skillsInfo = data?.items && data?.items[0].fields?.skills;
+  const skillsInfo = data?.items;
   return (
     <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
       <div className="w-100">
@@ -17,11 +17,14 @@ const Skills = () => {
         <div className="subheading mb-3">Programming Languages &amp; Tools</div>
         <div className="row">
           {
-            skillsInfo?.split(', ').map((skill, index) => (
-              <div key={index} className="col-6">
+            skillsInfo?.map((skill, index) => (
+              <div className="col-6" key={index}>
                 <p className="list-item">
-                  <FontAwesomeIcon icon={faCheckCircle} color="green" />
-                  <span className="ml-3">{skill}</span>
+                  <img 
+                    className="skill-icon" 
+                    src={skill?.fields?.icon?.fields?.file?.url} 
+                  />
+                  <span className="ml-3">{skill?.fields?.name}</span>
                 </p>
               </div>
             ))

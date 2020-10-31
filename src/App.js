@@ -39,6 +39,9 @@ class App extends Component {
           <Projects />
           <hr className="m-0" />
           <Publications />
+          <p className="text-dark text-center">
+            Copyright © {new Date().getFullYear()} | Muhammad Ammar Yasir
+          </p>
         </div>
       </div>
       </ContentfulProvider>

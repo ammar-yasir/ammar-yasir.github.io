@@ -1,4 +1,5 @@
 import React from 'react';
+import dayjs from 'dayjs';
 import { useContentful } from 'react-contentful';
 
 const Experience = () => {
@@ -21,7 +22,10 @@ const Experience = () => {
                 <p>{item?.fields?.aboutWork}</p>
               </div>
               <div className="resume-date text-md-right">
-                <span className="text-primary">{item?.fields?.startDate} - {item?.fields?.endDate ?? 'Present'}</span>
+                <span className="text-primary">
+                  {dayjs(item?.fields?.startDate).format('MMM, YYYY')} - {''}
+                  {item?.fields?.endDate ? dayjs(item?.fields?.endDate).format('MMM, YYYY') : 'Present'}
+                </span>
               </div>
             </div>
           ))

@@ -24,7 +24,7 @@ const Landing = () => {
   return (
     <section className="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
       <div className="w-100">
-        <h1 className="mb-0">
+        <h1 className="mb-3">
           <span className="text-primary">{contactInfo?.firstName} </span>
           {contactInfo?.lastName}
         </h1>

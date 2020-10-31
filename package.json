@@ -8,6 +8,7 @@
     "@fortawesome/free-brands-svg-icons": "^5.9.0",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",
     "@fortawesome/react-fontawesome": "^0.1.4",
+    "dayjs": "^1.9.4",
     "react": "^16.8.6",
     "react-contentful": "^2.0.30",
     "react-dom": "^16.8.6",

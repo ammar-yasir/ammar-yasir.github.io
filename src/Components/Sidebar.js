@@ -15,6 +15,7 @@ const Sidebar = () => {
         <span className="d-block d-lg-none">{contactInfo?.name}</span>
         <span className="d-none d-lg-block">
           <img
+            style={{ width: 150, height: 150 }}
             className="img-fluid img-profile rounded-circle mx-auto mb-2"
             src={`https:${contactInfo?.profileImage?.fields?.file?.url}`}
             alt=""
