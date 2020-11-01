@@ -1,7 +1,5 @@
 import React from 'react';
 import { useContentful } from 'react-contentful';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCheckCircle } from "@fortawesome/free-solid-svg-icons";
 
 const Skills = () => {
 
@@ -20,9 +18,10 @@ const Skills = () => {
             skillsInfo?.map((skill, index) => (
               <div className="col-6" key={index}>
                 <p className="list-item">
-                  <img 
+                  <img
                     className="skill-icon" 
-                    src={skill?.fields?.icon?.fields?.file?.url} 
+                    src={skill?.fields?.icon?.fields?.file?.url}
+                    alt="Skill Icon"
                   />
                   <span className="ml-3">{skill?.fields?.name}</span>
                 </p>
