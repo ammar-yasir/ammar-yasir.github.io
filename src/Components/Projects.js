@@ -1,5 +1,5 @@
 import React from 'react';
-import dayjs from 'dayjs';
+// import dayjs from 'dayjs';
 import { useContentful } from 'react-contentful';
 
 const Projects = () => {
@@ -22,12 +22,12 @@ const Projects = () => {
                 </a>
                 <div className="subheading mb-3">{item.fields?.shortDescription}</div>
               </div>
-              <div className="resume-date text-md-right">
+              {/* <div className="resume-date text-md-right">
                 <span className="text-primary">
                   {dayjs(item?.fields?.startDate).format('MMM, YYYY')} - {''}
                   {item?.fields?.endDate ? dayjs(item?.fields?.endDate).format('MMM, YYYY') : 'Present'}
                 </span>
-              </div>
+              </div> */}
             </div>
           ))
         }
